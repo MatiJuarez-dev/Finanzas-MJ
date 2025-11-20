@@ -1,0 +1,5 @@
+ID,FECHA,TIPO,CATEGORIA,MONTO,DESCRIPCION
+5,2025-11-20,Gasto,Comida,12000.00,1 kg de milanesas
+6,2025-11-20,Gasto,Suscripciones,18000.00,Netflix
+1,2025-11-19,Ingreso,Sueldo,1000000.00,Sueldo del mes de Noviembre
+2,2025-11-19,Gasto,Alquiler,450000.00,Pago del alquiler de noviembre
