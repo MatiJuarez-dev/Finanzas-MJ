@@ -24,24 +24,18 @@ class Billetera:
     # --- MÉTODOS PRINCIPALES ---
 
     def agregar_transaccion(self, monto, fecha, tipo, categoria, descripcion):
-        # Guardar en MySQL
-        billetera_db.agregar_transaccion(self.conexion, self.tabla, monto, fecha, tipo, categoria, descripcion)
-        # Actualizar TXT automáticamente
-        self._actualizar_txt()
+        billetera_db.agregar_transaccion(self.conexion, self.tabla, monto, fecha, tipo, categoria, descripcion) # Guardar en MySQL
+        self._actualizar_txt() # Actualizar TXT automáticamente
 
     def consultar_transacciones(self):
         return billetera_db.consultar_transacciones(self.conexion, self.tabla)
 
     def eliminar_transaccion(self, id_transaccion):
-        # Eliminar de MySQL
         billetera_db.eliminar_transaccion(self.conexion, self.tabla, id_transaccion)
-        # Actualizar TXT automáticamente
         self._actualizar_txt()
 
     def editar_transaccion(self, id_trans, monto, fecha, tipo, cat, desc):
-        # Editar en MySQL
         billetera_db.editar_transaccion(self.conexion, self.tabla, id_trans, monto, fecha, tipo, cat, desc)
-        # Actualizar TXT automáticamente
         self._actualizar_txt()
 
     # --- MÉTODO PARA EL BOTÓN DE LA GUI ---
